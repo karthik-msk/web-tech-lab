@@ -18,3 +18,14 @@ public class FileFunctions {
     }
   }
 }
+
+
+/*OUTPUT
+File name : sample.txt
+Absolute path : /home/lekhzzz/Documents/java/practice/sample.txt
+Writeable : true
+Readable : true
+File size in bytes : 35
+Is it a file ? : true
+Is it a directory ? : false
+*/
