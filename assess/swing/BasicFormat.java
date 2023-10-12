@@ -9,9 +9,9 @@ public class BasicFormat implements ActionListener{
     BasicFormat(){  //constructor
         
         frame = new JFrame("Hello");
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.setSize(450,350);
-		frame.setLayout(null);
+	frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	frame.setSize(450,350);
+	frame.setLayout(null);
         
         //define all the componets and add to frame
     }
