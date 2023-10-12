@@ -115,7 +115,8 @@ public class FileManipulationMenu {
             for (File file: files) {
                 System.out.println(file.getName()); //print the filenames from the list
             }
-        } else {
+        } 
+        else {
             System.out.println("Folder does not exist or is empty."); //if list empty, print no files found
         }
     }
@@ -128,7 +129,8 @@ public class FileManipulationMenu {
         File fileOrDir = new File(path); //open the folder and keep it in fileOrDir
         if (fileOrDir.exists()) { //if that folder exist print exist
             System.out.println("File or directory exists.");
-        } else { //if theres no folder with that name, print not found
+        } 
+        else { //if theres no folder with that name, print not found
             System.out.println("File or directory does not exist.");
         }
     }
@@ -142,10 +144,12 @@ public class FileManipulationMenu {
         if (fileOrDir.exists()) { //check if folder exist
             if (fileOrDir.canRead() && fileOrDir.canWrite()) { //check if we can read AND write in that folder. if true, print permission granted
                 System.out.println("Read and write permissions are granted.");
-            } else {
+            } 
+            else {
                 System.out.println("Read and/or write permissions are not granted.");
             }
-        } else {
+        } 
+        else {
             System.out.println("File or directory does not exist.");
         }
     }
@@ -160,10 +164,12 @@ public class FileManipulationMenu {
         if (fileOrDir.exists()) { //if the given path exist, check whether its a file or folder
             if (fileOrDir.isDirectory()) { // if isderectory = true, given path is  a folder
                 System.out.println("Path is a directory.");
-            } else if (fileOrDir.isFile()) { //else if isFile = true, given path a file
+            } 
+            else if (fileOrDir.isFile()) { //else if isFile = true, given path a file
                 System.out.println("Path is a file.");
             }
-        } else {
+        } 
+        else {
             System.out.println("File or directory does not exist.");
         }
     }
@@ -199,7 +205,8 @@ public class FileManipulationMenu {
 
             if (!reader1.hasNextLine() && !reader2.hasNextLine()) { //if both files dont have new lines, they are equal
                 System.out.println("Files are equal.");
-            } else { //else the files are of different lengths
+            } 
+            else { //else the files are of different lengths
                 System.out.println("Files have different lengths.");
             }
 
@@ -220,7 +227,8 @@ public class FileManipulationMenu {
             long lastModified = file.lastModified(); //get last modified data from file
             Date date = new Date(lastModified);
             System.out.println("Last modified date: " + date);
-        } else {
+        } 
+        else {
             System.out.println("File does not exist.");
         }
     }
@@ -244,7 +252,8 @@ public class FileManipulationMenu {
             System.out.println("File size: " + fileSize + " bytes"); //bytes
             System.out.println("File size: " + (fileSize / 1024) + " KB"); //kB
             System.out.println("File size: " + (fileSize / (1024 * 1024)) + " MB"); //MB
-        } else {
+        } 
+        else {
             System.out.println("File does not exist.");
         }
     }
@@ -263,7 +272,8 @@ public class FileManipulationMenu {
             } catch (IOException e) {
                 System.out.println("Error reading file.");
             }
-        } else {
+        } 
+        else {
             System.out.println("File does not exist.");
         }
     }
@@ -288,7 +298,8 @@ public class FileManipulationMenu {
             } catch (IOException e) {
                 System.out.println("Error reading file.");
             }
-        } else {
+        } 
+        else {
             System.out.println("File does not exist.");
         }
     }
@@ -313,7 +324,8 @@ public class FileManipulationMenu {
             } catch (IOException e) {
                 System.out.println("Error reading file.");
             }
-        } else {
+        } 
+        else {
             System.out.println("File does not exist.");
         }
     }
@@ -340,7 +352,8 @@ public class FileManipulationMenu {
             } catch (IOException e) {
                 System.out.println("Error reading file.");
             }
-        } else {
+        } 
+        else {
             System.out.println("File does not exist.");
         }
     }
@@ -371,7 +384,8 @@ public class FileManipulationMenu {
             } catch (IOException e) {
                 System.out.println("Error reading file.");
             }
-        } else {
+        } 
+        else {
             System.out.println("File does not exist.");
         }
     }
@@ -454,7 +468,8 @@ public class FileManipulationMenu {
             } catch (IOException e) {
                 System.out.println("Error reading file.");
             }
-        } else {
+        } 
+        else {
             System.out.println("File does not exist.");
         }
     }
@@ -486,13 +501,15 @@ public class FileManipulationMenu {
 
                 if (!longestWord.isEmpty()) {
                     System.out.println("Longest word: " + longestWord);
-                } else {
+                } 
+                else {
                     System.out.println("No words found in the file.");
                 }
             } catch (IOException e) {
                 System.out.println("Error reading file.");
             }
-        } else {
+        }
+        else {
             System.out.println("File does not exist.");
         }
     }
@@ -513,10 +530,12 @@ public class FileManipulationMenu {
                 for (File file: files) {
                     System.out.println(file.getName());
                 }
-            } else {
+            } 
+            else {
                 System.out.println("Directory is empty.");
             }
-        } else {
+        } 
+        else {
             System.out.println("Directory does not exist.");
         }
     }
