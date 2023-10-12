@@ -160,7 +160,7 @@ public class Calculator implements ActionListener{
 			}
 		}
 
-		//neb button will give the negative value
+		//neg button will give the negative value
 		if(e.getSource()==negButton) {
 			double temp = Double.parseDouble(textfield.getText());
 			temp*=-1;
