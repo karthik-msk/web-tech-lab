@@ -104,7 +104,7 @@ public class MultipleButtons implements ActionListener{
             }
         }
         if(e.getSource() == gpaButton){
-            String g = nameField.getText();
+            String g = gpaField.getText();
             if(g.isEmpty()){
                 System.out.println("Please enter gpa");
             }
