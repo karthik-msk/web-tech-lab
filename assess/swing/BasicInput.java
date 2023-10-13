@@ -56,7 +56,7 @@ public class BasicInput implements ActionListener{
             String n = name.getText();
             String r = roll.getText();
             String g = gpa.getText();
-            if(n=="" || r=="" || g==""){
+            if(n.isEmpty() || r.isEmpty() || g.isEmpty()){
                 System.out.println("Please enter all values");
             }
             else{
