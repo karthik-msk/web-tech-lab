@@ -64,6 +64,7 @@ public class student extends HttpServlet {
 			 ps.setString(10, grade);
 			 
 			 int i = ps.executeUpdate();
+			 out.println("<br><br><a href=\"index.html\">Go Back</a>"); //here \" is escape sequence.. instead of ", we give \"
 			 if(i>0) {
 				 out.println("<h3>Value added Succesfully</h3>");
 			 }
