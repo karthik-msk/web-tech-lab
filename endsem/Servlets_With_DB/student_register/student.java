@@ -14,7 +14,6 @@ public class student extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
 		String name = request.getParameter("sname");
@@ -64,7 +63,6 @@ public class student extends HttpServlet {
 			 ps.setString(10, grade);
 			 
 			 int i = ps.executeUpdate();
-			 out.println("<br><br><a href=\"index.html\">Go Back</a>"); //here \" is escape sequence.. instead of ", we give \"
 			 if(i>0) {
 				 out.println("<h3>Value added Succesfully</h3>");
 			 }
@@ -72,9 +70,8 @@ public class student extends HttpServlet {
 				 out.println("<h1>Error Occured</h1>");
 			 }
 			 
-			 Statement stmt = con.createStatement();
-			 String query = "select * from marks";
-			 ResultSet rs = stmt.executeQuery(query);
+			 PreparedStatement ps1 = con.prepareStatement("select * from marks");
+			 ResultSet rs = ps1.executeQuery();
 			 
 			 out.println("<h1>Available Students</h1>");
 			 out.println("<table border=1>");
@@ -116,9 +113,11 @@ public class student extends HttpServlet {
 				 out.println("<td>"+grade+"</td>");
 				 out.println("</tr>");
 			 } 	 
+			 
 		}
 		catch(Exception e) {
 			e.printStackTrace();
 		}	
+		out.println("<br><br><a href=\"index.html\">Go Back</a>"); //here \" is escape sequence.. instead of ", we give \"
 	}
 }
