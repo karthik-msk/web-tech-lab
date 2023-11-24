@@ -1,4 +1,4 @@
-//generic function to find max
+//generic function to find maximum
 
 public class GenericFindMax {
 
